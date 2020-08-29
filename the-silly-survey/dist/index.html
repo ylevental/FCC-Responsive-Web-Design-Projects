@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - The Silly Survey</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+  <header class="header">
+    <h1 id="title" class="text-center">The Silly Survey</h1>
+    <p id="description" class="description text-center">
+      Thank you for taking the time to answer life's important questions
+    </p>
+  </header>
+  <form id="survey-form">
+    <div class="form-group">
+      <label id="name-label" for="name">Name</label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        class="form-control"
+        placeholder="Enter your name"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label id="email-label" for="email">Email</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        class="form-control"
+        placeholder="Enter your Email"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label id="number-label" for="number"
+        >Birth Year<span class="clue">(optional)</span></label
+      >
+      <input
+        type="number"
+        name="year"
+        id="number"
+        min="1800"
+        max="2100"
+        class="form-control"
+        placeholder="Year"
+      />
+    </div>
+    <div class="form-group">
+      <p>What is your favorite flavor of ice cream?</p>
+      <select id="dropdown" name="role" class="form-control" required>
+        <option disabled selected value>Select favorite flavor</option>
+        <option value="student">Infrared</option>
+        <option value="job">Ultraviolet</option>
+        <option value="learner">Vantablack</option>
+        <option value="preferNo">Peanut Butter Truffle</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <p>What is your favorite style of computer programming?</p>
+      <label>
+        <input
+          name="user-recommend"
+          value="gaming"
+          type="radio"
+          class="input-radio"
+          checked
+        />Game Design</label
+      >
+      <label>
+        <input
+          name="user-recommend"
+          value="engineering"
+          type="radio"
+          class="input-radio"
+        />Software Engineering</label
+      >
+
+      <label
+        ><input
+          name="user-recommend"
+          value="web-mobile"
+          type="radio"
+          class="input-radio"
+        />Web and Mobile Computing</label
+      >
+      
+      <label
+        ><input
+          name="user-recommend"
+          value="theoretical-compsci"
+          type="radio"
+          class="input-radio"
+        />Theoretical Computer Science</label
+      >
+    </div>
+
+    <div class="form-group">
+      <p>
+        What is your favorite kind of food?
+      </p>
+      <select id="most-like" name="mostLike" class="form-control" required>
+        <option disabled selected value>Select an option</option>
+        <option value="challenges">Sprouted Sourdough Bread</option>
+        <option value="projects">Boiled Peanut Hummus</option>
+        <option value="community">Sprouted Corn Tortillas</option>
+        <option value="openSource">Parboiled Potatoes</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <p>
+        Who were your top 2020 presidential candidates?
+        <span class="clue">(Check all that apply)</span>
+      </p>
+
+      <label
+        ><input
+          name="prefer"
+          value="andrew-yang"
+          type="checkbox"
+          class="input-checkbox"
+        />Andrew Yang</label
+      >
+      <label>
+        <input
+          name="prefer"
+          value="bernie-sanders"
+          type="checkbox"
+          class="input-checkbox"
+        />Bernie Sanders</label
+      >
+      <label
+        ><input
+          name="prefer"
+          value="kanye-west"
+          type="checkbox"
+          class="input-checkbox"
+        />Kanye West</label
+      >
+      <label
+        ><input
+          name="prefer"
+          value="mike-gravel"
+          type="checkbox"
+          class="input-checkbox"
+        />Mike Gravel</label
+      >
+      <label
+        ><input
+          name="prefer"
+          value="bill-weld"
+          type="checkbox"
+          class="input-checkbox"
+        />Bill Weld</label
+      >
+      <label
+        ><input
+          name="prefer"
+          value="howie-hawkins"
+          type="checkbox"
+          class="input-checkbox"
+        />Howie Hawkins</label
+      >
+      <label
+        ><input
+          name="prefer"
+          value="jo-jorgensen"
+          type="checkbox"
+          class="input-checkbox"
+        />Jo Jorgensen</label
+      >
+      <label
+        ><input
+          name="prefer"
+          value="vermin-supreme"
+          type="checkbox"
+          class="input-checkbox"
+        />Vermin Supreme</label
+      >
+      <label
+        ><input
+          name="prefer"
+          value="joe-biden"
+          type="checkbox"
+          class="input-checkbox"
+        />Joe Biden</label
+      >
+      <label
+        ><input
+          name="prefer"
+          value="donald-trump"
+          type="checkbox"
+          class="input-checkbox"
+        />Donald Trump</label
+      >
+      <label
+        ><input
+          name="prefer"
+          value="other"
+          type="checkbox"
+          class="input-checkbox"
+        />Other</label
+      >
+    </div>
+
+    <div class="form-group">
+      <p>Take a positive odd number.  Multiply the number by 3, add 1, and keep dividing by 2 until there is another odd number.  Prove that when this process is repeated, every positive odd number eventually converges to 1.</p>
+      <textarea
+        id="comments"
+        class="input-textarea"
+        name="comment"
+        placeholder="Enter your comment here..."
+      ></textarea>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" id="submit" class="submit-button">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
+<!-- partial -->
+  <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

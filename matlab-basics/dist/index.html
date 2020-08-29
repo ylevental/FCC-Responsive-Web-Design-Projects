@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - MATLAB Basics</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<nav id="navbar">
+  <header>MATLAB Basics</header>
+  <ul>
+    <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+    <li>
+      <a class="nav-link" href="#What_you_should_already_know"
+        >What you should already know</a
+      >
+    </li>
+    <li>
+      <a class="nav-link" href="#MATLAB_and_Simulink">MATLAB and Simulink</a>
+    </li>
+    <li><a class="nav-link" href="#Hello_world">Hello world</a></li>
+    <li><a class="nav-link" href="#Variables">Variables</a></li>
+    <li>
+      <a class="nav-link" href="#Declaring_variables">Declaring variables</a>
+    </li>
+        <li>
+      <a class="nav-link" href="#Reference">Reference</a>
+    </li>
+  </ul>
+</nav>
+<main id="main-doc">
+  <section class="main-section" id="Introduction">
+    <header>Introduction</header>
+    <article>
+      <p>
+        MATLAB<sup>®</sup> (Matrix Laboratory) is a programming language designed for numerical computations.  It is a proprietary language, meaning that it cannot be freely used outside of the jurisdiction of MathWorks.
+      </p>
+
+      <p>
+        Cleve Moler, the chairman of the computer science department at the University of New Mexico, started developing MATLAB in the late 1970s to make mathematical programming easier.  It is a popular language in control engineering and image processing, among many other domains.  It is influenced by Fortran.  There are several additional toolboxes available; for example:
+      </p>
+      <ul>
+        <li>
+       The Image Processing Toolbox provides algorithms for image processing, analysis, and visualization. Possible applications include image segmentation, image enhancement, noise reduction, geometric transformations, image registration, and 3D image processing.   
+        </li>
+        <li>
+          Simulink is a MATLAB-based graphical programming environment for dynamical systems. The software uses a graphical block diagramming tool and a customizable set of libraries.  It is popular in control systems and signal processing for its flowchart capabilities, and can drive MATLAB or be scripted from it.
+        </li>
+      </ul>
+    </article>
+  </section>
+  <section class="main-section" id="What_you_should_already_know">
+    <header>What you should already know</header>
+    <article>
+      <p>This guide assumes you have the following basic background:</p>
+
+      <ul>
+        <li>
+          Basic computer usage and computer applications skills on Windows, Mac OS X, or Linux.
+        </li>
+        <li>Mathematical proficiency equal to or greater than Algebra II for computing purposes.</li>
+        <li>
+          Some programming experience. If you are new to programming, try one of
+          the tutorials linked on the main page about MATLAB.
+        </li>
+      </ul>
+    </article>
+  </section>
+  <section class="main-section" id="MATLAB_and_Simulink">
+    <header>MATLAB and Simulink</header>
+    <article>
+      <p>
+        The main products of MathWorks are MATLAB and Simulink.  MATLAB is both a programming language and a software application.  Code is executed through the command window or through running .m files.  MATLAB programs are built primarily using variables, vectors, and matrices.
+      </p>
+
+      <p>
+       Simulink has a Graphical User Interface (GUI) whereas Matlab is only code.  Simulink's GUI gives one the opportunity to create flowcharts.  Simulink can interface with hardware such as robots and motors. It is useful for creating a PID Controller, which creates continuously modulated control.
+      </p>
+      <p>
+  MATLAB can embed code, meaning that it can convert Simulink code to C code.  One limitation of Matlab is that it doesn't control hardware very well, as it does not have the required libraries. 
+      </p>
+    </article>
+  </section>
+  <section class="main-section" id="Hello_world">
+    <header>Hello world</header>
+    <article>
+      To simply print "Hello world", type the following into the MATLAB terminal:
+      <code>disp('Hello world');</code>
+
+      This will simply print 'Hello world'.  If you wish to create a function, you have to create a file with an input and output variable, then call the function from the MATLAB terminal:
+<code><pre>function f = greetMe(n)
+    f = "Hello " + n;
+end
+greetMe("World");</pre></code>
+    </article>
+  </section>
+  <section class="main-section" id="Variables">
+    <header>Variables</header>
+    <p>
+      You use variables as symbolic names for values in your application. The
+      names of variables must conform to certain rules.
+    </p>
+    <p>
+A valid MATLAB variable name starts with a letter, followed by letters, digits, or underscores. MATLAB is case sensitive, so A and a are not the same variable. The maximum length of a variable name is the value that the "namelengthmax" command returns.
+
+One cannot define variables with the same names as MATLAB keywords, such as "if" or "end". For a complete list, run the "iskeyword" command.
+
+    </p>
+    <p>
+      If you create a variable that uses the name of a function, you sometimes get unexpected results.
+    </p>
+  </section>
+  <section class="main-section" id="Declaring_variables">
+    <header>Declaring variables</header>
+    <article>
+      Variables do not have to be declared before assigning values to them.
+      <p>
+        Enter the variable name in the Command Window, followed by an equal sign (=) and the value you want to assign to the variable.  For example: <code>var x = 42.</code> 
+      </p>
+      <p>
+       If you do not end the assignment statement with a semicolon (;), MATLAB displays the result in the Command Window.  For example: <code>x = 75</code> will return <code>x = 
+          75.0000</code> 
+      </p>
+      <p>
+        If you do not assign the output of a statement to a variable, MATLAB typically assigns the result to the reserved word 'ans'. For example,<code>13</code> will return <code>ans = 
+          13.0000</code>
+      </p>
+    </article>
+  </section>
+    <section class="main-section" id="Reference">
+    <header>Reference</header>
+    <article>
+      <ul>
+        <li>
+          All the documentation in this page is taken from the
+          <a
+            href="https://www.mathworks.com/help/matlab/"
+            target="_blank"
+            >MathWorks Help Center</a
+          >
+        </li>
+      </ul>
+    </article>
+  </section>
+</main>
+<!-- partial -->
+  <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
